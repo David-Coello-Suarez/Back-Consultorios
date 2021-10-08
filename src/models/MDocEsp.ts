@@ -8,8 +8,20 @@ export const DocEspe = conexion.define<IDocEsp>("DoctorEspecialidade", {
         primaryKey: true,
         autoIncrement: true,
     },
-    idespecialidad: DataTypes.INTEGER,
-    iddoctor: DataTypes.INTEGER,
+    idespecialidad: {
+        type: DataTypes.INTEGER,
+        references: {
+            model: "Especialidades",
+            key: "id",
+        },
+    },
+    iddoctor: {
+        type: DataTypes.INTEGER,
+        references: {
+            model: "Doctores",
+            key: "id",
+        },
+    },
 })
 
-DocEspe.sync()
+DocEspe.sync({alter: true})

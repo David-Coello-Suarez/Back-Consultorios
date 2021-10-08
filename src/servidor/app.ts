@@ -2,7 +2,7 @@ import express, { Application } from "express"
 import cors from "cors"
 import conexion from "../conexion/coneccion"
 import morgan from "morgan"
-import { doctores, especialidades } from "../routers"
+import { docesp, doctores, especialidades } from "../routers"
 
 export class Servidor {
     private app: Application
@@ -41,6 +41,7 @@ export class Servidor {
     private RutasActivas(): void {
         this.app.use(`${this.ruta}/especialidad`, especialidades)
         this.app.use(`${this.ruta}/doctor`, doctores)
+        this.app.use(`${this.ruta}/docEsp`, docesp)
     }
 
     escuchando(): void {
