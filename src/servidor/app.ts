@@ -3,7 +3,7 @@ import cors from "cors"
 import conexion from "../conexion/coneccion"
 import morgan from "morgan"
 import "./asociaciones"
-import { docesp, doctores, especialidades, paciente } from "../routers"
+import { docesp, doctores, empresa, especialidades, paciente } from "../routers"
 
 export class Servidor {
     private app: Application
@@ -44,6 +44,7 @@ export class Servidor {
         this.app.use(`${this.ruta}/doctor`, doctores)
         this.app.use(`${this.ruta}/docEsp`, docesp)
         this.app.use(`${this.ruta}/paciente`, paciente)
+        this.app.use(`${this.ruta}/empresa`, empresa)
     }
 
     escuchando(): void {
