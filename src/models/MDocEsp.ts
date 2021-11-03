@@ -9,16 +9,15 @@ export const DocEspe = conexion.define<IDocEsp>("DoctorEspecialidade", {
         autoIncrement: true,
     },
     idespecialidad: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.INTEGER.ZEROFILL,
         references: {
             model: "Especialidades",
             key: "id",
-            
         },
     
     },
     iddoctor: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.INTEGER.ZEROFILL,
         references: {
             model: "Doctores",
             key: "id",
@@ -26,4 +25,4 @@ export const DocEspe = conexion.define<IDocEsp>("DoctorEspecialidade", {
     },
 })
 
-DocEspe.sync({alter: true})
+DocEspe.sync()

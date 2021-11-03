@@ -2,6 +2,7 @@ import express, { Application } from "express"
 import cors from "cors"
 import conexion from "../conexion/coneccion"
 import morgan from "morgan"
+import './asociaciones'
 import { docesp, doctores, especialidades } from "../routers"
 
 export class Servidor {
