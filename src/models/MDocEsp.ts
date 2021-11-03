@@ -13,7 +13,9 @@ export const DocEspe = conexion.define<IDocEsp>("DoctorEspecialidade", {
         references: {
             model: "Especialidades",
             key: "id",
+            
         },
+    
     },
     iddoctor: {
         type: DataTypes.INTEGER,
