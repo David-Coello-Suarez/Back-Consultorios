@@ -1,4 +1,6 @@
 import { IDocEsp } from "./IDocEspe"
 import { IDoctor } from "./IDoctor"
 import { IEspecialidad } from "./IEspecialidad"
-export { IEspecialidad, IDoctor, IDocEsp }
+import { IPaciente } from "./IPaciente"
+
+export { IEspecialidad, IDoctor, IDocEsp, IPaciente }

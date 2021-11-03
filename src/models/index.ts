@@ -1,4 +1,6 @@
-import { DocEspe } from './MDocEsp';
+import { DocEspe } from "./MDocEsp"
 import { Doctores } from "./MDoctor"
 import { Especialidades } from "./MEspecialidad"
-export { Especialidades, Doctores, DocEspe }
+import { Pacientes } from "./MPacientes"
+
+export { Especialidades, Doctores, DocEspe, Pacientes }
