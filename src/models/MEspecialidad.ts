@@ -25,8 +25,6 @@ export const Especialidades = conexion.define<IEspecialidad>("Especialidades", {
         allowNull: false,
         defaultValue: literal("CURRENT_TIMESTAMP"),
     },
-}, {
-    freezeTableName: true,
-  })
+})
 
-Especialidades.sync()
+Especialidades.sync({force: true})
