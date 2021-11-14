@@ -3,7 +3,7 @@ import conexion from "../conexion/coneccion"
 import { DataTypes } from "sequelize"
 
 export const DocEspe = conexion.define<IDocEsp>(
-    "DoctorEspecialidade",
+    "DoctorEspecialidades",
     {
         id: {
             type: DataTypes.INTEGER.ZEROFILL,
