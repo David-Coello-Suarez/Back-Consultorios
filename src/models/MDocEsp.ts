@@ -24,9 +24,6 @@ export const DocEspe = conexion.define<IDocEsp>(
                 key: "id",
             },
         },
-    },
-    {
-        freezeTableName: true,
     }
 )
 
