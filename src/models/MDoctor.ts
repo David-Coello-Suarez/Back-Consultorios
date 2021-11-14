@@ -1,4 +1,4 @@
-import { literal, DataTypes } from "sequelize"
+import {  DataTypes } from "sequelize"
 import conexion from "../conexion/coneccion"
 import { IDoctor } from "../interfaces"
 
@@ -23,6 +23,8 @@ export const Doctores = conexion.define<IDoctor>("Doctores", {
         type: DataTypes.BOOLEAN,
         defaultValue: true
     }
-})
-
+}, {
+    freezeTableName: true,
+  }
+)
 Doctores.sync()
