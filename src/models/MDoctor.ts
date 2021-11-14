@@ -23,8 +23,6 @@ export const Doctores = conexion.define<IDoctor>("Doctores", {
         type: DataTypes.BOOLEAN,
         defaultValue: true
     }
-}, {
-    freezeTableName: true,
-  }
+}
 )
 Doctores.sync()
