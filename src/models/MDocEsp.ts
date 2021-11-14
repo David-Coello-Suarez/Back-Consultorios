@@ -2,27 +2,32 @@ import { IDocEsp } from "./../interfaces/IDocEspe"
 import conexion from "../conexion/coneccion"
 import { DataTypes } from "sequelize"
 
-export const DocEspe = conexion.define<IDocEsp>("DoctorEspecialidade", {
-    id: {
-        type: DataTypes.INTEGER.ZEROFILL,
-        primaryKey: true,
-        autoIncrement: true,
-    },
-    idespecialidad: {
-        type: DataTypes.INTEGER.ZEROFILL,
-        references: {
-            model: "Especialidades",
-            key: "id",
+export const DocEspe = conexion.define<IDocEsp>(
+    "DoctorEspecialidade",
+    {
+        id: {
+            type: DataTypes.INTEGER.ZEROFILL,
+            primaryKey: true,
+            autoIncrement: true,
         },
-    
-    },
-    iddoctor: {
-        type: DataTypes.INTEGER.ZEROFILL,
-        references: {
-            model: "Doctores",
-            key: "id",
+        idespecialidad: {
+            type: DataTypes.INTEGER.ZEROFILL,
+            references: {
+                model: "Especialidades",
+                key: "id",
+            },
+        },
+        iddoctor: {
+            type: DataTypes.INTEGER.ZEROFILL,
+            references: {
+                model: "Doctores",
+                key: "id",
+            },
         },
     },
-})
+    {
+        freezeTableName: true,
+    }
+)
 
 DocEspe.sync()
