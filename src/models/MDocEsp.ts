@@ -12,17 +12,17 @@ export const DocEspe = conexion.define<IDocEsp>(
         },
         idespecialidad: {
             type: DataTypes.INTEGER.ZEROFILL,
-            references: {
-                model: "Especialidades",
-                key: "id",
-            },
+            // references: {
+            //     model: "Especialidades",
+            //     key: "id",
+            // },
         },
         iddoctor: {
             type: DataTypes.INTEGER.ZEROFILL,
-            references: {
-                model: "Doctores",
-                key: "id",
-            },
+            // references: {
+            //     model: "Doctores",
+            //     key: "id",
+            // },
         },
     }
 )

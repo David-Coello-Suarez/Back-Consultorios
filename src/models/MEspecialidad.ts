@@ -27,9 +27,6 @@ export const Especialidades = conexion.define<IEspecialidad>(
             allowNull: false,
             defaultValue: literal("CURRENT_TIMESTAMP"),
         },
-    },
-    {
-        freezeTableName: true,
     }
 )
 

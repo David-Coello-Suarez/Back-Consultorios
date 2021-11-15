@@ -3,7 +3,7 @@ import { diactelo, uriservidor } from "./entorno"
 
 const conexion: Sequelize = new Sequelize(`${uriservidor}`, {
     dialect: `${diactelo}`,
-    logging: false,
+    logging: true,
     // query: {
     //     raw: true,
     // },
