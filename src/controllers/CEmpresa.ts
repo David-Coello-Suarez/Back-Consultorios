@@ -11,7 +11,7 @@ const GetEmpresa = async (req: Request, res: Response) => {
         Empresa.findAll({ limit: limite, offset: inicia }),
     ])
 
-    if (total > 0) {
+    if (total.length > 0) {
         const data = {
             empresas,
             total,

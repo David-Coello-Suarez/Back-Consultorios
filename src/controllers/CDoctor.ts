@@ -11,7 +11,7 @@ const GetDoctores = async (req: Request, res: Response) => {
         Doctores.findAll({ limit: limite, offset: inicia }),
     ])
 
-    if (total > 0) {
+    if (total.length > 0) {
         const data = {
             doctores,
             total,
